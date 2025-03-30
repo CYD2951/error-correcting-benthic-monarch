@@ -1,151 +1,134 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYD | Error-Correcting Benthic Monarch</title>
+    <style>
+        :root {
+            --primary: #2A2951; /* 紫微帝星紫 */
+            --secondary: #B8860B; /* 破军鎏金 */
+            --accent: #00FF7F; /* 文昌星绿 */
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: white;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 1px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--secondary);
+            text-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+        }
+        .album-art {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            position: relative;
+        }
+        .decoder {
+            background: #111;
+            padding: 15px;
+            border: 1px dashed var(--accent);
+            margin: 20px 0;
+        }
+        button {
+            background: var(--secondary);
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            text-align: center;
+            opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+            .album-art {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Error-Correcting Benthic Monarch&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f5f5f5;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input, button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 5px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1a252f;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#result {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e8f4f8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#badge {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Error-Correcting Benthic Monarch&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;生肖解密提示生成器&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;请输入您的生日获取专属解密提示：&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="date" id="birthday"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="generateHint()"&gt;获取解密提示&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="hintResult"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;音频修正验证&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;请上传修正后的音频文件：&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="file" id="audioFile" accept="audio/*"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="verifyAudio()"&gt;验证音频&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="result"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="resultText"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img id="badge" src="" alt="钨丝勋章"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function generateHint() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const zodiacs = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const birthday = document.getElementById('birthday').value;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!birthday) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>alert('请先选择您的生日');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const birthYear = new Date(birthday).getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const zodiac = zodiacs[(birthYear - 4) % 12]; //生肖计算公式</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>let hint = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>switch(zodiac) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '鼠': hint = '检查27秒处的音频频谱'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '牛': hint = '检查低频段(50-200Hz)的异常'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '虎': hint = '注意中频段(200-2000Hz)的峰值'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '兔': hint = '寻找高频段(5kHz以上)的隐藏信息'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '龙': hint = '分析全频谱的谐波结构'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '蛇': hint = '检查1分08秒处的相位变化'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '马': hint = '寻找左右声道的差异'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '羊': hint = '注意3分33秒的静默段'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '猴': hint = '分析频谱图中的重复模式'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '鸡': hint = '检查开头5秒的噪声特征'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '狗': hint = '寻找结尾处的反向音频'; break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case '猪': hint = '分析振幅调制模式'; break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('hintResult').innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;您的生肖${zodiac}提示：&lt;/strong&gt; ${hint}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function verifyAudio() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const fileInput = document.getElementById('audioFile');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!fileInput.files || fileInput.files.length === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>alert('请先选择音频文件');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 模拟音频验证过程</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('result').style.display = 'block';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('resultText').innerHTML = '音频验证成功！&lt;br&gt;您获得了&lt;b&gt;钨丝勋章&lt;/b&gt;：';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('badge').src = 'https://via.placeholder.com/200x200/2c3e50/ffffff?text=钨丝勋章';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('badge').style.display = 'block';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 实际应用中这里应该添加音频分析代码</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 例如使用Web Audio API分析音频</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <header>
+        <h1>ERROR-CORRECTING BENTHIC MONARCH</h1>
+        <p>紫微破军加密声学系统 / CYD (cydian bloom)</p>
+    </header>
+
+    <div class="album-art" id="art">
+        <!-- 动态频谱图将通过JS加载 -->
+    </div>
+
+    <div class="decoder">
+        <h3>命理音频解密器</h3>
+        <input type="date" id="birthday" placeholder="输入生辰">
+        <button onclick="decode()">获取生肖密钥</button>
+        <div id="output"></div>
+    </div>
+
+    <section>
+        <h2>TRACKLIST</h2>
+        <ol>
+            <li>亥时校准 (Echo Bloom)</li>
+            <li>癸亥回路 (Liquid Circuit)</li>
+            <li>太阴记忆体 (Grey Room Memory)</li>
+            <!-- 其他曲目... -->
+        </ol>
+    </section>
+
+    <footer>
+        <p>℗ 2025 cydian bloom | 解密进度 <span id="progress">0%</span></p>
+    </footer>
+
+    <script>
+        // 生肖密钥生成器
+        function decode() {
+            const zodiacs = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+            const birthYear = new Date(document.getElementById('birthday').value).getFullYear();
+            const zodiac = zodiacs[(birthYear - 4) % 12];
+            
+            document.getElementById('output').innerHTML = `
+                <p>生肖: <strong>${zodiac}</strong></p>
+                <p>专属频率: <strong>${17300 + (birthYear % 100)}Hz</strong></p>
+            `;
+            
+            // 更新解密进度（模拟）
+            document.getElementById('progress').textContent = "33%";
+            document.getElementById('art').style.background = 
+                `linear-gradient(45deg, ${zodiac === '鼠' ? '#2E5984' : '#550527'}, var(--secondary))`;
+        }
+
+        // 加载分析（简易版）
+        if(window.location.hash === "#debug") {
+            console.log("命理音频协议启动...");
+            performance.mark('init');
+        }
+    </script>
+
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?[你的ID]";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </body>
 </html>
