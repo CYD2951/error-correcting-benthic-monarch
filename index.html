@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error-Correcting Benthic Monarch</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #1a252f;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #e8f4f8;
+            display: none;
+        }
+        #badge {
+            max-width: 200px;
+            display: block;
+            margin: 20px auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error-Correcting Benthic Monarch</h1>
+        
+        <div class="section">
+            <h2>生肖解密提示生成器</h2>
+            <p>请输入您的生日获取专属解密提示：</p>
+            <input type="date" id="birthday">
+            <button onclick="generateHint()">获取解密提示</button>
+            <div id="hintResult"></div>
+        </div>
+        
+        <div class="section">
+            <h2>音频修正验证</h2>
+            <p>请上传修正后的音频文件：</p>
+            <input type="file" id="audioFile" accept="audio/*">
+            <button onclick="verifyAudio()">验证音频</button>
+            <div id="result">
+                <p id="resultText"></p>
+                <img id="badge" src="" alt="钨丝勋章">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateHint() {
+            const zodiacs = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+            const birthday = document.getElementById('birthday').value;
+            
+            if (!birthday) {
+                alert('请先选择您的生日');
+                return;
+            }
+            
+            const birthYear = new Date(birthday).getFullYear();
+            const zodiac = zodiacs[(birthYear - 4) % 12]; //生肖计算公式
+            
+            let hint = '';
+            switch(zodiac) {
+                case '鼠': hint = '检查27秒处的音频频谱'; break;
+                case '牛': hint = '检查低频段(50-200Hz)的异常'; break;
+                case '虎': hint = '注意中频段(200-2000Hz)的峰值'; break;
+                case '兔': hint = '寻找高频段(5kHz以上)的隐藏信息'; break;
+                case '龙': hint = '分析全频谱的谐波结构'; break;
+                case '蛇': hint = '检查1分08秒处的相位变化'; break;
+                case '马': hint = '寻找左右声道的差异'; break;
+                case '羊': hint = '注意3分33秒的静默段'; break;
+                case '猴': hint = '分析频谱图中的重复模式'; break;
+                case '鸡': hint = '检查开头5秒的噪声特征'; break;
+                case '狗': hint = '寻找结尾处的反向音频'; break;
+                case '猪': hint = '分析振幅调制模式'; break;
+            }
+            
+            document.getElementById('hintResult').innerHTML = `
+                <p><strong>您的生肖${zodiac}提示：</strong> ${hint}</p>
+            `;
+        }
+        
+        function verifyAudio() {
+            const fileInput = document.getElementById('audioFile');
+            if (!fileInput.files || fileInput.files.length === 0) {
+                alert('请先选择音频文件');
+                return;
+            }
+            
+            // 模拟音频验证过程
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('resultText').innerHTML = '音频验证成功！<br>您获得了<b>钨丝勋章</b>：';
+            document.getElementById('badge').src = 'https://via.placeholder.com/200x200/2c3e50/ffffff?text=钨丝勋章';
+            document.getElementById('badge').style.display = 'block';
+            
+            // 实际应用中这里应该添加音频分析代码
+            // 例如使用Web Audio API分析音频
+        }
+    </script>
+</body>
+</html>
