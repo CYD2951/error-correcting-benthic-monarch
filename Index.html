@@ -1,0 +1,10 @@
+<input type="date" id="birthday">
+<button onclick="checkZodiac()">获取解密工具</button>
+<script>
+function checkZodiac() {
+    const zodiacs = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+    const year = new Date(document.getElementById("birthday").value).getFullYear();
+    const zodiac = zodiacs[(year - 4) % 12];  // 生肖计算
+    alert(`您的生肖【${zodiac}】专属密钥已生成！`);
+}
+</script>
