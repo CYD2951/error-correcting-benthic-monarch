@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYD | Error-Correcting Benthic Monarch</title>
+    <style>
+        :root {
+            --primary: #2A2951; /* 紫微帝星紫 */
+            --secondary: #B8860B; /* 破军鎏金 */
+            --accent: #00FF7F; /* 文昌星绿 */
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: white;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 1px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--secondary);
+            text-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+        }
+        .album-art {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            position: relative;
+        }
+        .decoder {
+            background: #111;
+            padding: 15px;
+            border: 1px dashed var(--accent);
+            margin: 20px 0;
+        }
+        button {
+            background: var(--secondary);
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            text-align: center;
+            opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+            .album-art {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ERROR-CORRECTING BENTHIC MONARCH</h1>
+        <p>紫微破军加密声学系统 / CYD (cydian bloom)</p>
+    </header>
+
+    <div class="album-art" id="art">
+        <!-- 动态频谱图将通过JS加载 -->
+    </div>
+
+    <div class="decoder">
+        <h3>命理音频解密器</h3>
+        <input type="date" id="birthday" placeholder="输入生辰">
+        <button onclick="decode()">获取生肖密钥</button>
+        <div id="output"></div>
+    </div>
+
+    <section>
+        <h2>TRACKLIST</h2>
+        <ol>
+            <li>亥时校准 (Echo Bloom)</li>
+            <li>癸亥回路 (Liquid Circuit)</li>
+            <li>太阴记忆体 (Grey Room Memory)</li>
+            <!-- 其他曲目... -->
+        </ol>
+    </section>
+
+    <footer>
+        <p>℗ 2025 cydian bloom | 解密进度 <span id="progress">0%</span></p>
+    </footer>
+
+    <script>
+        // 生肖密钥生成器
+        function decode() {
+            const zodiacs = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+            const birthYear = new Date(document.getElementById('birthday').value).getFullYear();
+            const zodiac = zodiacs[(birthYear - 4) % 12];
+            
+            document.getElementById('output').innerHTML = `
+                <p>生肖: <strong>${zodiac}</strong></p>
+                <p>专属频率: <strong>${17300 + (birthYear % 100)}Hz</strong></p>
+            `;
+            
+            // 更新解密进度（模拟）
+            document.getElementById('progress').textContent = "33%";
+            document.getElementById('art').style.background = 
+                `linear-gradient(45deg, ${zodiac === '鼠' ? '#2E5984' : '#550527'}, var(--secondary))`;
+        }
+
+        // 加载分析（简易版）
+        if(window.location.hash === "#debug") {
+            console.log("命理音频协议启动...");
+            performance.mark('init');
+        }
+    </script>
+
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?[你的ID]";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
